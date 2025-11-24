@@ -1,0 +1,7 @@
+FROM python:3.12-bullseye
+
+RUN apt-get update && apt-get install -y git && \
+    pip install --no-cache-dir requests jupyterlab && \
+    rm -rf /var/lib/apt/lists/*
+
+CMD ["jupyter", "lab", "--ip=0.0.0.0", "--no-browser", "--allow-root"]
