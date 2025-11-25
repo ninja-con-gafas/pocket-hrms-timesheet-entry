@@ -136,7 +136,7 @@ def validate_total_time(entries):
     # Group entries by date
     date_groups = {}
     for entry in entries:
-        date_key = entry['FromDate']
+        date_key = entry['ToDate']
         if date_key not in date_groups:
             date_groups[date_key] = []
         date_groups[date_key].append(entry)
@@ -160,7 +160,7 @@ def prepare_request_data(entries):
     # Group entries by date
     date_groups = {}
     for entry in entries:
-        date_key = entry['FromDate']
+        date_key = entry['ToDate']
         if date_key not in date_groups:
             date_groups[date_key] = []
         date_groups[date_key].append(entry)
@@ -219,7 +219,7 @@ def display_summary(entries):
     # Group by date
     date_groups = {}
     for entry in entries:
-        date_key = entry['FromDate']
+        date_key = entry['ToDate']
         if date_key not in date_groups:
             date_groups[date_key] = []
         date_groups[date_key].append(entry)
